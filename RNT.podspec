@@ -5,7 +5,7 @@ package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 version = package['version']
 
 source = { :git => 'https://github.com/facebook/react-native.git' }
-if version == '1000.0.1'
+if version == '1000.0.3'
   # This is an unpublished version, use the latest commit hash of the react-native repo, which we’re presumably in.
   source[:commit] = `git rev-parse HEAD`.strip
 else
@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
   s.cocoapods_version       = ">= 1.2.0"
 
   s.subspec "Core" do |ss|
-    ss.dependency             "yoga", "#{package["version"]}.React"
+    ss.dependency             "yoga"
     ss.source_files         = "React/**/*.{c,h,m,mm,S,cpp}"
     ss.exclude_files        = "**/__tests__/*",
                               "IntegrationTests/*",
