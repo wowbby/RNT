@@ -5,7 +5,7 @@ package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 version = package['version']
 
 source = { :git => 'https://github.com/facebook/react-native.git' }
-if version == '1000.0.0'
+if version == '1000.0.1'
   # This is an unpublished version, use the latest commit hash of the react-native repo, which we’re presumably in.
   source[:commit] = `git rev-parse HEAD`.strip
 else
