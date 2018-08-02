@@ -16,7 +16,7 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 folly_version = '2016.10.31.00'
 
 Pod::Spec.new do |s|
-  s.name                    = "React"
+  s.name                    = "RNT"
   s.version                 = version
   s.summary                 = package["description"]
   s.description             = <<-DESC
